@@ -1,0 +1,82 @@
+{
+  "-NskZ2NfIl5Op6_phVSW": {
+    "firebaseKey": "-NskZ2NfIl5Op6_phVSW",
+    "orderType": "phone",
+    "total": "$27.84",
+    "tipAmount": "$15.35",
+    "paymentType": "credit",
+    "date": "2/25/2024",
+    "order_id": "-NsZlIfs9Q5Aaqx30nrW",
+    "uid": "jesse"
+  },
+  "-NskZ2NhwrqiFfauplET": {
+    "firebaseKey": "-NskZ2NhwrqiFfauplET",
+    "orderType": "phone",
+    "total": "$84.03",
+    "tipAmount": "$22.64",
+    "paymentType": "credit",
+    "date": "1/14/2024",
+    "order_id": "-NsZlIfuvt3UFj0YPHRk",
+    "uid": "jesse"
+  },
+  "-NskZ2NjdHKn4aMtRGtR": {
+    "firebaseKey": "-NskZ2NjdHKn4aMtRGtR",
+    "orderType": "in-person",
+    "total": "$36.65",
+    "tipAmount": "$4.15",
+    "paymentType": "credit",
+    "date": "2/20/2024",
+    "order_id": "-NsZlIfwJaxqQqOweotk",
+    "uid": "yarelis"
+  },
+  "-NskZ2NksoTqFyUZgHZR": {
+    "firebaseKey": "-NskZ2NksoTqFyUZgHZR",
+    "orderType": "phone",
+    "total": "$70.89",
+    "tipAmount": "$21.53",
+    "paymentType": "credit",
+    "date": "8/5/2023",
+    "order_id": "-NsZlIfxgIrKJ2-xAoWu",
+    "uid": "yarelis"
+  },
+  "-NskZ2NmXYtn4BTFjzNi": {
+    "firebaseKey": "-NskZ2NmXYtn4BTFjzNi",
+    "orderType": "in-person",
+    "total": "$42.78",
+    "tipAmount": "$22.14",
+    "paymentType": "credit",
+    "date": "11/12/2023",
+    "order_id": "-NsZlIfyJ2eP8TBENh9-",
+    "uid": "andrew"
+  },
+  "-NskZ2NnquBL_QdbcAAJ": {
+    "firebaseKey": "-NskZ2NnquBL_QdbcAAJ",
+    "orderType": "in-person",
+    "total": "$95.16",
+    "tipAmount": "$13.40",
+    "paymentType": "cash",
+    "date": "5/24/2023",
+    "order_id": "-NsZlIfzkJtRgS2_-cWg",
+    "uid": "andrew"
+  },
+  "-NskZ2NoLw7757hCRVtd": {
+    "firebaseKey": "-NskZ2NoLw7757hCRVtd",
+    "orderType": "phone",
+    "total": "$71.46",
+    "tipAmount": "$4.90",
+    "paymentType": "credit",
+    "date": "12/4/2023",
+    "order_id": "-NsZlIg-QNf6QHVKYnrj",
+    "uid": "britnay"
+  },
+  "-NskZ2NqE9gGelcLSQtz": {
+    "firebaseKey": "-NskZ2NqE9gGelcLSQtz",
+    "orderType": "phone",
+    "total": "$54.29",
+    "tipAmount": "$6.85",
+    "paymentType": "mobile",
+    "date": "5/8/2023",
+    "order_id": "-NsZlIg1FFVckMS2a32v",
+    "uid": "britnay"
+  }
+}
