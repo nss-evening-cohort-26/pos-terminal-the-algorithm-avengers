@@ -1,0 +1,90 @@
+{
+  "-NsZlIfs9Q5Aaqx30nrW": {
+    "firebaseKey": "-NsZlIfs9Q5Aaqx30nrW",
+    "customer_name": "Kirsteni Vennings",
+    "customer_phone": "307-439-2171",
+    "customer_email": "kvennings0@ucoz.ru",
+    "status": "true",
+    "type": "in-person",
+    "price": "$35.82",
+    "timeSubmitted": "8/8/2023",
+    "uid": "jesse"
+  },
+  "-NsZlIfuvt3UFj0YPHRk": {
+    "firebaseKey": "-NsZlIfuvt3UFj0YPHRk",
+    "customer_name": "Charmain Ingall",
+    "customer_phone": "877-172-3645",
+    "customer_email": "cingall1@phoca.cz",
+    "status": "true",
+    "type": "in-person",
+    "price": "$19.00",
+    "timeSubmitted": "7/13/2023",
+    "uid": "jesse"
+  },
+  "-NsZlIfwJaxqQqOweotk": {
+    "firebaseKey": "-NsZlIfwJaxqQqOweotk",
+    "customer_name": "Melesa Rickerd",
+    "customer_phone": "426-454-5819",
+    "customer_email": "mrickerd2@google.com.hk",
+    "status": "false",
+    "type": "phone",
+    "price": "$19.28",
+    "timeSubmitted": "5/15/2023",
+    "uid": "yarelis"
+  },
+  "-NsZlIfxgIrKJ2-xAoWu": {
+    "firebaseKey": "-NsZlIfxgIrKJ2-xAoWu",
+    "customer_name": "Hadria Kuhnhardt",
+    "customer_phone": "483-404-2814",
+    "customer_email": "hkuhnhardt3@eventbrite.com",
+    "status": "false",
+    "type": "in-person",
+    "price": "$13.71",
+    "timeSubmitted": "2/15/2024",
+    "uid": "yarelis"
+  },
+  "-NsZlIfyJ2eP8TBENh9-": {
+    "firebaseKey": "-NsZlIfyJ2eP8TBENh9-",
+    "customer_name": "Godart Harrisson",
+    "customer_phone": "585-321-8697",
+    "customer_email": "gharrisson4@xrea.com",
+    "status": "false",
+    "type": "phone",
+    "price": "$45.58",
+    "timeSubmitted": "10/21/2023",
+    "uid": "andrew"
+  },
+  "-NsZlIfzkJtRgS2_-cWg": {
+    "firebaseKey": "-NsZlIfzkJtRgS2_-cWg",
+    "customer_name": "Arleen Corpe",
+    "customer_phone": "106-927-6423",
+    "customer_email": "acorpe5@w3.org",
+    "status": "false",
+    "type": "in-person",
+    "price": "$36.05",
+    "timeSubmitted": "7/1/2023",
+    "uid": "andrew"
+  },
+  "-NsZlIg-QNf6QHVKYnrj": {
+    "firebaseKey": "-NsZlIg-QNf6QHVKYnrj",
+    "customer_name": "Modesty Pagitt",
+    "customer_phone": "166-252-0661",
+    "customer_email": "mpagitt6@goodreads.com",
+    "status": "false",
+    "type": "phone",
+    "price": "$8.07",
+    "timeSubmitted": "8/23/2023",
+    "uid": "britnay"
+  },
+  "-NsZlIg1FFVckMS2a32v": {
+    "firebaseKey": "-NsZlIg1FFVckMS2a32v",
+    "customer_name": "Barry Gorring",
+    "customer_phone": "585-979-2093",
+    "customer_email": "bgorring7@ovh.net",
+    "status": "true",
+    "type": "in-person",
+    "price": "$30.06",
+    "timeSubmitted": "3/31/2023",
+    "uid": "britnay"
+  }
+}
