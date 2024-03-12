@@ -9,12 +9,12 @@
 
 Everything that needs to be done before coding starts.
 
-* **ERD** - Create an ERD to show the relationships between all of  your data
-* **Postman Collection** - Create a postman collection to store and test out all of your API calls.
+* **[ERD](https://dbdiagram.io/d/Hip-Hop-Pizza-and-Wangs-65ecacc2b1f3d4062c85dbe3)** - Create an ERD to show the relationships between all of  your data
+* **[Postman Collection](https://restless-robot-80667.postman.co/workspace/New-Team-Workspace~db71f8b8-1dc5-4d6a-8113-f93687f7d04a/collection/31929847-d58940ba-db9a-4706-a291-c2ed04a0c0e1?action=share&creator=33562650)** - Create a postman collection to store and test out all of your API calls.
 * **[Wireframes](https://www.figma.com/file/4y3EZddALuBR3ouSEM57Np/MVP?node-id=0%3A1)** - This is the basic MVP wireframe. You can choose to style how you wish.
-* **Flowchart** - Plan out the flow of your data through the application
-* **Github Issue Tickets** - Using the Project Instructions as a guide, create issue tickets for this project’s work.
-* **Github Milestones** - Separate those issue tickets into Milestones to plan out the work.
+* **[Flowchart](https://lucid.app/lucidchart/76cff346-df2f-48c7-8f73-40a8becad9b6/edit?viewport_loc=-5850%2C-681%2C10400%2C5094%2C0_0&invitationId=inv_5cedc629-9d07-4fd9-9286-2c46caa47ecb)** - Plan out the flow of your data through the application
+* **[Github Issue Tickets](https://github.com/nss-evening-cohort-26/pos-terminal-the-algorithm-avengers/issues)** - Using the Project Instructions as a guide, create issue tickets for this project’s work.
+* **[Github Milestones](https://github.com/nss-evening-cohort-26/pos-terminal-the-algorithm-avengers/milestones)** - Separate those issue tickets into Milestones to plan out the work.
 
 ## Definition of Done
 
