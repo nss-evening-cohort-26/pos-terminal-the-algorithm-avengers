@@ -1,6 +1,6 @@
 import renderToDom from '../utils/renderToDom';
 
-const showOrderItems = (obj) => {
+const viewOrderItems = (obj) => {
   let itemString = '<h1>TOTAL: </h1>';
 
   obj.items.forEach((item) => {
@@ -22,4 +22,4 @@ const showOrderItems = (obj) => {
   renderToDom('#view', itemString);
 };
 
-export default showOrderItems;
+export default viewOrderItems;
