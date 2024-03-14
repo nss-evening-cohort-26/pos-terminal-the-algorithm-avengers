@@ -7,7 +7,7 @@ import formEvents from '../events/formEvents';
 import navEvents from '../events/navEvents';
 
 const startApp = (uid, displayName) => {
-  domBuilder(uid);
+  domBuilder();
   domEvents(uid);
   formEvents(uid);
   navBar();

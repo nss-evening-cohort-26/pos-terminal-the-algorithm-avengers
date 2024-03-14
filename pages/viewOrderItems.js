@@ -1,6 +1,9 @@
+import clearDom from '../utils/clearDom';
 import renderToDom from '../utils/renderToDom';
 
 const viewOrderItems = (obj) => {
+  clearDom();
+  console.warn(obj);
   let itemString = '<h1>TOTAL: </h1>';
 
   obj.items.forEach((item) => {
@@ -12,12 +15,13 @@ const viewOrderItems = (obj) => {
       <a href="#" class="card-link" id="item-edit--${item.firebaseKey}">Edit Item</a>
         <a href="#" class="card-link" id="item-delete--${item.firebaseKey}">Delete Item</a>
     </div>
-    </div>
-    <div class="d-grid gap-2">
-      <button class="btn btn-primary" type="button" id="add-item">Add Item</button>
-      <button class="btn btn-primary" type="button" id="go-to-payment">Go To Payment</button>
     </div>`;
   });
+
+  itemString += `<div class="d-grid gap-2">
+  <button class="btn btn-primary" type="button" id="add-item">Add Item</button>
+  <button class="btn btn-primary" type="button" id="go-to-payment">Go To Payment</button>
+  </div>`;
 
   renderToDom('#view', itemString);
 };
