@@ -1,9 +1,37 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
 
-
 body {
-  background-color: antiquewhite;
-  color: brown;
+  background-color: #2a2a2a;
+  color: #ffffff;
   text-align: center;
+}
+
+.order-container {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+
+  .order-btns {
+    margin-top: 10px;
+  }
+
+  .card {
+    background-color: #ffffff;
+    width: 250px;
+    margin: 20px;
+    text-align: left;
+    border-radius: 4px;
+
+    span {
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
 }
