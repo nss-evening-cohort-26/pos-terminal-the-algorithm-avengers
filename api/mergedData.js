@@ -8,7 +8,6 @@ const getOrderAndItems = async (orderFirebaseKey) => {
 
   // GET THE ORDERITEMS RELATED TO THE ORDER
   const orderItems = await getOrderItems(orderFirebaseKey);
-  console.warn('orderItems', orderItems);
   // GET THE SINGLE ITEM IN ORDER RETURNS AN ARRAY OF PROMISES
   const items = await orderItems.map((ob) => getSingleItem(ob.item_id));
   // PROMISE.ALL TO GET ALL ITEM OBJECTS

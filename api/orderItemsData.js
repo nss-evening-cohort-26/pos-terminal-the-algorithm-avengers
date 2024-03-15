@@ -11,8 +11,6 @@ const getOrderItems = (orderFirebaseKey) => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.warn('data', data);
-      // console.warn(Object.values(data));
       if (data) {
         resolve(Object.values(data));
       } else {
