@@ -1,4 +1,4 @@
-import getOrders from '../api/orderData';
+import { getOrders } from '../api/orderData';
 import { showOrders } from '../pages/orders';
 
 const navEvents = (uid) => {

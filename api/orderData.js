@@ -20,4 +20,19 @@ const getOrders = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export default getOrders;
+const getSingleOrder = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/orders/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      resolve(data);
+      // console.warn(data);
+    })
+    .catch(reject);
+});
+
+export { getOrders, getSingleOrder };
