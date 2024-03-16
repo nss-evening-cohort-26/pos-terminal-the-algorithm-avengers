@@ -15,6 +15,10 @@ const domEvents = (uid) => {
 
       getOrderAndItems(firebaseKey).then(viewOrderItems);
     }
+
+    if (e.target.id.includes('go-to-payment')) {
+      // render payment form
+    }
   });
 };
 
