@@ -1,4 +1,4 @@
-import getOrders from '../api/orderData';
+import { getOrders } from '../api/orderData';
 import addOrderForm from '../components/forms/newOrderForm';
 import { showOrders } from '../pages/orders';
 

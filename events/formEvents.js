@@ -5,6 +5,10 @@ const formEvents = (uid) => {
 
     if (e.target.id.includes('submit-order')) {
       console.warn('Submit Order');
+
+      // const payload = {
+      //   customer_email: document.querySelector
+      // };
     }
   });
 };
