@@ -7,7 +7,7 @@ const viewOrderItems = (obj) => {
   const total = obj.items.reduce((totalAmt, item) => totalAmt + parseFloat(item.price) * 100, 0);
 
   let itemString = `<h1>TOTAL: $${Number((total / 100).toFixed(2))} </h1>`;
-
+  // delete-item-from-order-btn--${item.firebaseKey}--${obj.firebaseKey}
   if (obj.items.length) {
     obj.items.forEach((item) => {
       itemString += `
@@ -16,7 +16,7 @@ const viewOrderItems = (obj) => {
         <h5 class="card-title">${item.name}</h5>
         <p>PRICE: $${item.price}</p>
         <a href="#" class="card-link" id="item-edit--${item.firebaseKey}">Edit Item</a>
-          <a href="#" class="card-link" id="item-delete--${item.firebaseKey}">Delete Item</a>
+          <a href="#" class="card-link" id="delete-item-from-order-btn--${item.firebaseKey}--${obj.firebaseKey}">Delete Item</a>
       </div>
       </div>`;
     });
