@@ -7,7 +7,6 @@ const viewOrderItems = (obj) => {
   const total = obj.items.reduce((totalAmt, item) => totalAmt + parseFloat(item.price) * 100, 0);
 
   let itemString = `<h1>TOTAL: $${Number((total / 100).toFixed(2))} </h1>`;
-  // delete-item-from-order-btn--${item.firebaseKey}--${obj.firebaseKey}
   if (obj.items.length) {
     obj.items.forEach((item) => {
       itemString += `

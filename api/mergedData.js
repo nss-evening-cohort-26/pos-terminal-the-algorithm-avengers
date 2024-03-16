@@ -1,6 +1,6 @@
 import { getSingleItem } from './itemData';
-import { getSingleOrder } from './orderData';
-import { getOrderItems } from './orderItemsData';
+import { deleteSingleOrder, getSingleOrder } from './orderData';
+import { deleteOrderItems, getOrderItems } from './orderItemsData';
 
 const getOrderAndItems = async (orderFirebaseKey) => {
   //  GET THE SINGLE ORDER
@@ -16,6 +16,13 @@ const getOrderAndItems = async (orderFirebaseKey) => {
   return { ...order, items: itemsInOrder };
 };
 
+const deleteOrderItemsRelationship = async (ordersFirebaseKey) => {
+  const orderItems = await getOrderItems(ordersFirebaseKey);
+  const deleteItemPromises = await orderItems.map((oiObj) => deleteOrderItems(oiObj.firebaseKey));
+
+  await Promise.all(deleteItemPromises).then(() => deleteSingleOrder(ordersFirebaseKey));
+};
+
 // THIS IS USED TO REMOVE A ITEM FROM AN ORDER
 const getASingleItemOrder = async (orderFirebaseKey, itemFirebaseKey) => {
   // GET ALL THE ORDERITEMS RELATED TO THE ORDER
@@ -28,4 +35,4 @@ const getASingleItemOrder = async (orderFirebaseKey, itemFirebaseKey) => {
   return singleItemInOrder;
 };
 
-export { getOrderAndItems, getASingleItemOrder };
+export { getOrderAndItems, getASingleItemOrder, deleteOrderItemsRelationship };

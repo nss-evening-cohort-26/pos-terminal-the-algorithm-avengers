@@ -1,4 +1,4 @@
-import { getASingleItemOrder, getOrderAndItems } from '../api/mergedData';
+import { getASingleItemOrder, getOrderAndItems, deleteOrderItemsRelationship } from '../api/mergedData';
 import { getOrders } from '../api/orderData';
 import { deleteOrderItems } from '../api/orderItemsData';
 import { showOrders } from '../pages/orders';
@@ -16,6 +16,16 @@ const domEvents = (uid) => {
 
       getOrderAndItems(firebaseKey).then(viewOrderItems);
     }
+
+    // Click Event for deleting an Order
+    if (e.target.id.includes('delete-order-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+
+      deleteOrderItemsRelationship(firebaseKey).then(() => {
+        getOrders(uid).then(showOrders);
+      });
+    }
+
     if (e.target.id.includes('delete-item-from-order-btn')) {
       console.warn('del-me!');
       // SPLIT OFF THE BOTH KEYS FROM BUTTON
