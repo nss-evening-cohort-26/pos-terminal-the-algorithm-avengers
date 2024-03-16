@@ -1,6 +1,6 @@
 import addOrderForm from '../components/forms/newOrderForm';
 import { getASingleItemOrder, getOrderAndItems, deleteOrderItemsRelationship } from '../api/mergedData';
-import { getOrders } from '../api/orderData';
+import { getOrders, getSingleOrder } from '../api/orderData';
 import { deleteOrderItems } from '../api/orderItemsData';
 import { showOrders } from '../pages/orders';
 import viewOrderItems from '../pages/viewOrderItems';
@@ -17,7 +17,9 @@ const domEvents = (uid) => {
     }
 
     if (e.target.id.includes('edit-order-btn')) {
-      console.warn('Edit Order');
+      const [, firebaseKey] = e.target.id.split('--');
+
+      getSingleOrder(firebaseKey).then((orderObj) => addOrderForm(orderObj));
     }
 
     // This allows me to view the items for the order

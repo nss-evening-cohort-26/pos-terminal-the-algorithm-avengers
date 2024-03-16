@@ -18,8 +18,13 @@ const addOrderForm = (obj = {}) => {
         <input type="text" class="form-control" id="customer_phone" placeholder="Enter your email address"  value="${obj.customer_phone || ''}" required>
       </div>
       <div class="form-group">
-        <label for="title">Order Type</label>
-        <input type="text" class="form-control" id="order-type" aria-describedby="Type" placeholder="Select an Order Type"  value="${obj.type || ''}"required>
+        <label for="type">Order Type</label>
+        <select class="form-control" id="order-type" required>
+          <option value="">Select Order Type</option>
+          <option value="in-person" ${obj.type === 'in-person' ? 'selected' : ''}>In person</option>
+          <option value="online" ${obj.type === 'online' ? 'selected' : ''}>Online</option>
+          <option value="phone"  ${obj.type === 'phone' ? 'selected' : ''}>Phone</option>
+        </select>
       </div>
       <button type="submit" class="btn btn-primary mt-3">${obj.firebaseKey ? 'Update Order' : 'Create an Order'}</button>
       </div>
