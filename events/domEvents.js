@@ -1,4 +1,4 @@
-import getOrderAndItems from '../api/mergedData';
+import { getOrderAndItems, deleteOrderItemsRelationship } from '../api/mergedData';
 import { getOrders } from '../api/orderData';
 import { showOrders } from '../pages/orders';
 import viewOrderItems from '../pages/viewOrderItems';
@@ -14,6 +14,15 @@ const domEvents = (uid) => {
       const [, firebaseKey] = e.target.id.split('--');
 
       getOrderAndItems(firebaseKey).then(viewOrderItems);
+    }
+
+    // Click Event for deleting an Order
+    if (e.target.id.includes('delete-order-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+
+      deleteOrderItemsRelationship(firebaseKey).then(() => {
+        getOrders(uid).then(showOrders);
+      });
     }
   });
 };
