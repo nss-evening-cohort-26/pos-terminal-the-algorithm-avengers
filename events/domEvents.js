@@ -1,6 +1,7 @@
 import addOrderForm from '../components/forms/newOrderForm';
-import getOrderAndItems from '../api/mergedData';
+import { getASingleItemOrder, getOrderAndItems, deleteOrderItemsRelationship } from '../api/mergedData';
 import { getOrders } from '../api/orderData';
+import { deleteOrderItems } from '../api/orderItemsData';
 import { showOrders } from '../pages/orders';
 import viewOrderItems from '../pages/viewOrderItems';
 
@@ -24,6 +25,32 @@ const domEvents = (uid) => {
       const [, firebaseKey] = e.target.id.split('--');
 
       getOrderAndItems(firebaseKey).then(viewOrderItems);
+    }
+
+    // Click Event for deleting an Order
+    if (e.target.id.includes('delete-order-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+
+      deleteOrderItemsRelationship(firebaseKey).then(() => {
+        getOrders(uid).then(showOrders);
+      });
+    }
+
+    if (e.target.id.includes('delete-item-from-order-btn')) {
+      console.warn('del-me!');
+      // SPLIT OFF THE BOTH KEYS FROM BUTTON
+      const [, itemFirebaseKey, orderFirebaseKey] = e.target.id.split('--');
+      console.warn(orderFirebaseKey);
+
+      // GET THE SINGLE ITEM ORDER SO YOU HAVE THE FIREBASEKEY
+      getASingleItemOrder(orderFirebaseKey, itemFirebaseKey)
+
+      // DELETE SINGLE ORDERITEM BY FIREBASEKEY
+        .then((orderItem) => deleteOrderItems(orderItem.firebaseKey))
+        .then(() => {
+          // GET ORDER DETAILS AND VIEW ORDER
+          getOrderAndItems(orderFirebaseKey).then(viewOrderItems);
+        });
     }
   });
 };
