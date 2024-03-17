@@ -52,3 +52,18 @@ body {
     }
   }
 }
+
+#form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.close-order-form {
+  width: 600px;
+  margin-top: 100px;
+  text-align: left;
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+}
