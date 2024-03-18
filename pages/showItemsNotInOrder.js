@@ -18,7 +18,7 @@ const showItemsNotInOrder = (array, orderFirebaseKey) => {
         <h5 class="card-title">${item.name}</h5>
         <p>PRICE: $${item.price}</p>
         <hr>
-        <a href="#" class="card-link" id="add-item-to-order-btn--${item.firebaseKey}--${orderFirebaseKey}">Add Item To Order</a>
+        <a href="#" class="card-link" id="add-item-to-order-btn--${orderFirebaseKey}--${item.firebaseKey}">Add Item To Order</a>
       </div>
       </div>`;
     });

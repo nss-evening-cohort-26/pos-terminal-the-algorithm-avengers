@@ -53,7 +53,7 @@ const domEvents = (uid) => {
     }
     if (e.target.id.includes('add-item-to-order-btn')) {
       console.warn('add-me');
-      const [, itemFirebaseKey, orderFirebaseKey] = e.target.id.split('--');
+      const [, orderFirebaseKey, itemFirebaseKey] = e.target.id.split('--');
       console.warn(itemFirebaseKey, orderFirebaseKey);
       const payload = {
         item_id: itemFirebaseKey,
