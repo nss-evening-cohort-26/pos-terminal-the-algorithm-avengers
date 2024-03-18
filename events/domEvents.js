@@ -54,11 +54,13 @@ const domEvents = (uid) => {
     if (e.target.id.includes('add-item-to-order-btn')) {
       console.warn('add-me');
       const [, itemFirebaseKey, orderFirebaseKey] = e.target.id.split('--');
+      console.warn(itemFirebaseKey, orderFirebaseKey);
       const payload = {
         item_id: itemFirebaseKey,
         order_id: orderFirebaseKey,
-        uid
+        uid,
       };
+      console.warn(payload);
       createOrderItems(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateOrderItem(patchPayload).then(() => {
