@@ -1,7 +1,10 @@
-import { getASingleItemOrder, getOrderAndItems, deleteOrderItemsRelationship } from '../api/mergedData';
+import {
+  getASingleItemOrder, getOrderAndItems, deleteOrderItemsRelationship, getItemsNotInTheOrder
+} from '../api/mergedData';
 import { getOrders } from '../api/orderData';
-import { deleteOrderItems } from '../api/orderItemsData';
+import { createOrderItems, deleteOrderItems, updateOrderItem } from '../api/orderItemsData';
 import { showOrders } from '../pages/orders';
+import showItemsNotInOrder from '../pages/showItemsNotInOrder';
 import viewOrderItems from '../pages/viewOrderItems';
 
 const domEvents = (uid) => {
@@ -41,6 +44,27 @@ const domEvents = (uid) => {
           // GET ORDER DETAILS AND VIEW ORDER
           getOrderAndItems(orderFirebaseKey).then(viewOrderItems);
         });
+    }
+    if (e.target.id.includes('show-items-not-in-order-btn')) {
+      console.warn('add a item');
+      const [, orderFirebaseKey] = e.target.id.split('--');
+      console.warn(orderFirebaseKey);
+      getItemsNotInTheOrder(orderFirebaseKey, uid).then((itemsArray) => showItemsNotInOrder(itemsArray, orderFirebaseKey));
+    }
+    if (e.target.id.includes('add-item-to-order-btn')) {
+      console.warn('add-me');
+      const [, itemFirebaseKey, orderFirebaseKey] = e.target.id.split('--');
+      const payload = {
+        item_id: itemFirebaseKey,
+        order_id: orderFirebaseKey,
+        uid
+      };
+      createOrderItems(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+        updateOrderItem(patchPayload).then(() => {
+          getItemsNotInTheOrder(orderFirebaseKey, uid).then((itemsArray) => showItemsNotInOrder(itemsArray, orderFirebaseKey));
+        });
+      });
     }
   });
 };
