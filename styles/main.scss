@@ -35,6 +35,29 @@ body {
     }
   }
 }
+#main-container {
+  
+  #form-container {
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    color: white;
+    text-align: left;
+
+    #formModal {
+      color: black;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    form {
+      margin-top: 50px;
+    }
+  }
+
+}
 
 #view {
   h1 {
