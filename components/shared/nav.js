@@ -5,7 +5,7 @@ const navBar = () => {
     <div class="container-fluid">
       </a>
       <div id="create_view">
-        <button id="view_order_btn" class="btn btn-outline-success me-2" type="button">View Order</button>
+        <button id="view_order_btn" class="btn btn-outline-success me-2" type="button">View Orders</button>
         <button id="create_order_btn" class="btn btn-outline-success me-2" type="button">Create an Order</button>
       </div>
       <div id="search-div" style="display: flex;">

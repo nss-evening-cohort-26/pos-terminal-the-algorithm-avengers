@@ -35,6 +35,29 @@ body {
     }
   }
 }
+#main-container {
+  
+  #form-container {
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    color: white;
+    text-align: left;
+
+    #formModal {
+      color: black;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    form {
+      margin-top: 50px;
+    }
+  }
+
+}
 
 #view {
   h1 {
@@ -50,5 +73,20 @@ body {
       flex-grow: 2;
       margin: 0px 10px 0px 10px;
     }
+  }
+}
+
+#form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.close-order-form {
+  width: 600px;
+  margin-top: 100px;
+  text-align: left;
+
+  .form-group {
+    margin-bottom: 20px;
   }
 }
