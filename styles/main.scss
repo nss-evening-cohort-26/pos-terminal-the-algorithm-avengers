@@ -39,3 +39,87 @@ body {
     color: white;
   }
 }
+
+.order-container {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+
+  .order-btns {
+    margin-top: 10px;
+  }
+
+  .card {
+    background-color: #ffffff;
+    width: 250px;
+    margin: 20px;
+    text-align: left;
+    border-radius: 4px;
+
+    span {
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+#main-container {
+  
+  #form-container {
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    color: white;
+    text-align: left;
+
+    #formModal {
+      color: black;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    form {
+      margin-top: 50px;
+    }
+  }
+
+}
+
+#view {
+  h1 {
+    margin-top: 50px; 
+    margin-bottom: 50px;
+  }
+  #itembtns {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    button {
+      flex-grow: 2;
+      margin: 0px 10px 0px 10px;
+    }
+  }
+}
+
+#form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.close-order-form {
+  width: 600px;
+  margin-top: 100px;
+  text-align: left;
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+}
