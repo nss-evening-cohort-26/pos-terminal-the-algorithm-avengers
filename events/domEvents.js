@@ -17,7 +17,6 @@ const domEvents = (uid) => {
     }
 
     if (e.target.id.includes('create_order_home')) {
-      console.warn('Create an Order');
       addOrderForm();
     }
 
@@ -44,10 +43,8 @@ const domEvents = (uid) => {
     }
 
     if (e.target.id.includes('delete-item-from-order-btn')) {
-      console.warn('del-me!');
       // SPLIT OFF THE BOTH KEYS FROM BUTTON
       const [, orderFirebaseKey, itemFirebaseKey] = e.target.id.split('--');
-      console.warn(orderFirebaseKey);
 
       // GET THE SINGLE ITEM ORDER SO YOU HAVE THE FIREBASEKEY
       getASingleItemOrder(orderFirebaseKey, itemFirebaseKey)
@@ -60,21 +57,17 @@ const domEvents = (uid) => {
         });
     }
     if (e.target.id.includes('show-items-not-in-order-btn')) {
-      console.warn('add a item');
       const [, orderFirebaseKey] = e.target.id.split('--');
-      console.warn(orderFirebaseKey);
       getItemsNotInTheOrder(orderFirebaseKey, uid).then((itemsArray) => showItemsNotInOrder(itemsArray, orderFirebaseKey));
     }
     if (e.target.id.includes('add-item-to-order-btn')) {
-      console.warn('add-me');
       const [, orderFirebaseKey, itemFirebaseKey] = e.target.id.split('--');
-      console.warn(itemFirebaseKey, orderFirebaseKey);
       const payload = {
         item_id: itemFirebaseKey,
         order_id: orderFirebaseKey,
         uid,
       };
-      console.warn(payload);
+
       createOrderItems(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateOrderItem(patchPayload).then(() => {

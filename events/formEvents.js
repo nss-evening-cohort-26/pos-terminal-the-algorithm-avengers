@@ -2,7 +2,7 @@ import { createOrder, getOrders, updateOrder } from '../api/orderData';
 import { showOrders } from '../pages/orders';
 
 const formEvents = (uid) => {
-  // console.warn(uid);
+  //  (uid);
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -46,13 +46,8 @@ const formEvents = (uid) => {
         getOrders(uid).then((orders) => showOrders(orders, uid));
       });
     }
-  });
 
-  document.querySelector('#form-container').addEventListener('click', (e) => {
-    e.preventDefault();
-
-    // adds payment type, tip amount, and updates order status to closed
-    if (e.target.id.includes('close-order-btn')) {
+    if (e.target.id.includes('close-order')) {
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
         paymentType: document.querySelector('#payment-type').value,

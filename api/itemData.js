@@ -32,7 +32,6 @@ const getSingleItem = (firebaseKey) => new Promise((resolve, reject) => {
     .then((response) => response.json())
     .then((data) => {
       resolve(data);
-      // console.warn(data);
     })
     .catch(reject);
 });

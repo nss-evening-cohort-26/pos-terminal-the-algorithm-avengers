@@ -18,7 +18,7 @@ const closeOrderForm = (uid, order = {}) => {
         <label>Tip amount</label>
         <input type="text" class="form-control" id="tip-amount" placeholder="Enter a tip amount" value="${order.tipAmount || ''}" required>
       </div>
-      <button type="submit" id="close-order-btn--${order.firebaseKey}" class="btn btn-success">Close Order</button>
+      <button type="submit" class="btn btn-success">Close Order</button>
     </form>`;
   renderToDOM('#form-container', domString);
 };
