@@ -9,7 +9,7 @@ const emptyItems = () => {
 const showItemsNotInOrder = (array, orderFirebaseKey) => {
   clearDom();
 
-  let domString = '';
+  let domString = '<div id="itemsNot">';
 
   if (array.length > 0) {
     array.forEach((item) => {
@@ -22,6 +22,7 @@ const showItemsNotInOrder = (array, orderFirebaseKey) => {
       </div>
       </div>`;
     });
+    domString += '</div>';
     renderToDom('#store', domString);
   } else {
     emptyItems();

@@ -6,7 +6,7 @@ const viewOrderItems = (obj) => {
 
   const total = obj.items.reduce((totalAmt, item) => totalAmt + parseFloat(item.price) * 100, 0);
 
-  let itemString = `<h1>TOTAL: $${Number((total / 100).toFixed(2))} </h1>`;
+  let itemString = `<div id="view-all-items-container"><h1>TOTAL: $${Number((total / 100).toFixed(2))} </h1>`;
   if (obj.items.length) {
     obj.items.forEach((item) => {
       itemString += `
@@ -23,10 +23,10 @@ const viewOrderItems = (obj) => {
     itemString += '<h1>There are no items in this order!</h1>';
   }
 
-  itemString += `<div id="itembtns" style="margin-bottom: 50px;">
-  <button class="btn btn-primary" type="button" id="show-items-not-in-order-btn--${obj.firebaseKey}">Add Item</button>
+  itemString += `<div id="itembtns">
+  <button class="btn btn-primary" type="button" style="background-color:#24a580; border: none;" id="show-items-not-in-order-btn--${obj.firebaseKey}">Add Item</button>
   <button class="btn btn-primary" type="button" id="go-to-payment-btn--${obj.firebaseKey}">Go To Payment</button>
-  </div>`;
+  </div></div>`;
 
   renderToDom('#view', itemString);
 };
