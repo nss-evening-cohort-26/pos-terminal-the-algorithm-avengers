@@ -13,7 +13,7 @@ const showItemsNotInOrder = (array, orderFirebaseKey) => {
 
   if (array.length > 0) {
     array.forEach((item) => {
-      domString += `<div class="card w-75 mb-3" style="margin: 0 auto;">
+      domString += `<div class="card w-75 mb-3" style="margin: 25px auto 10px;">
       <div class="card-body">
         <h5 class="card-title">${item.name}</h5>
         <p>PRICE: $${item.price}</p>

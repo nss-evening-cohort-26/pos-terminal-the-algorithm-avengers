@@ -23,7 +23,7 @@ const viewOrderItems = (obj) => {
     itemString += '<h1>There are no items in this order!</h1>';
   }
 
-  itemString += `<div id="itembtns">
+  itemString += `<div id="itembtns" style="margin-bottom: 50px;">
   <button class="btn btn-primary" type="button" id="show-items-not-in-order-btn--${obj.firebaseKey}">Add Item</button>
   <button class="btn btn-primary" type="button" id="go-to-payment-btn--${obj.firebaseKey}">Go To Payment</button>
   </div>`;
