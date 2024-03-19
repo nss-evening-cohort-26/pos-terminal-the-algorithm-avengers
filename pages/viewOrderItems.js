@@ -25,7 +25,7 @@ const viewOrderItems = (obj) => {
 
   itemString += `<div id="itembtns">
   <button class="btn btn-primary" type="button" id="add-item">Add Item</button>
-  <button class="btn btn-primary" type="button" id="go-to-payment">Go To Payment</button>
+  <button class="btn btn-primary" type="button" id="go-to-payment-btn--${obj.firebaseKey}">Go To Payment</button>
   </div>`;
 
   renderToDom('#view', itemString);
