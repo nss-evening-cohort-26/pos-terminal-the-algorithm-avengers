@@ -46,13 +46,8 @@ const formEvents = (uid) => {
         getOrders(uid).then((orders) => showOrders(orders, uid));
       });
     }
-  });
 
-  document.querySelector('#form-container').addEventListener('click', (e) => {
-    e.preventDefault();
-
-    // adds payment type, tip amount, and updates order status to closed
-    if (e.target.id.includes('close-order-btn')) {
+    if (e.target.id.includes('close-order')) {
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
         paymentType: document.querySelector('#payment-type').value,
