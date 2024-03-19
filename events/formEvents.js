@@ -2,7 +2,7 @@ import { createOrder, getOrders, updateOrder } from '../api/orderData';
 import { showOrders } from '../pages/orders';
 
 const formEvents = (uid) => {
-  // console.warn(uid);
+  //  (uid);
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
 
