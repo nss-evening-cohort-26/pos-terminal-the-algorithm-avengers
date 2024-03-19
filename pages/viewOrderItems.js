@@ -15,7 +15,7 @@ const viewOrderItems = (obj) => {
         <h5 class="card-title">${item.name}</h5>
         <p>PRICE: $${item.price}</p>
         <a href="#" class="card-link" id="item-edit--${item.firebaseKey}">Edit Item</a>
-          <a href="#" class="card-link" id="delete-item-from-order-btn--${item.firebaseKey}--${obj.firebaseKey}">Delete Item</a>
+          <a href="#" class="card-link" id="delete-item-from-order-btn--${obj.firebaseKey}--${item.firebaseKey}">Delete Item</a>
       </div>
       </div>`;
     });
@@ -24,7 +24,7 @@ const viewOrderItems = (obj) => {
   }
 
   itemString += `<div id="itembtns">
-  <button class="btn btn-primary" type="button" id="add-item">Add Item</button>
+  <button class="btn btn-primary" type="button" id="show-items-not-in-order-btn--${obj.firebaseKey}">Add Item</button>
   <button class="btn btn-primary" type="button" id="go-to-payment-btn--${obj.firebaseKey}">Go To Payment</button>
   </div>`;
 
