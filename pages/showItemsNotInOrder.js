@@ -1,19 +1,20 @@
 import renderToDom from '../utils/renderToDom';
 import clearDom from '../utils/clearDom';
 
-const emptyItems = () => {
-  const domString = '<h1>All Available Items Are In The Order</h1>';
+const emptyItems = (orderFirebaseKey) => {
+  let domString = '<h1>All Available Items Are In The Order</h1>';
+  domString += `<button class="btn btn-primary" type="button" id="go-back-to-order--${orderFirebaseKey}">Go Back To Order</button></div>`;
   renderToDom('#store', domString);
 };
 
 const showItemsNotInOrder = (array, orderFirebaseKey) => {
   clearDom();
 
-  let domString = '';
+  let domString = '<div id="itemsNot">';
 
   if (array.length > 0) {
     array.forEach((item) => {
-      domString += `<div class="card w-75 mb-3" style="margin: 0 auto;">
+      domString += `<div class="card w-75 mb-3" style="margin: 25px auto 10px;">
       <div class="card-body">
         <h5 class="card-title">${item.name}</h5>
         <p>PRICE: $${item.price}</p>
@@ -22,9 +23,10 @@ const showItemsNotInOrder = (array, orderFirebaseKey) => {
       </div>
       </div>`;
     });
+    domString += `<button class="btn btn-primary" type="button" id="go-back-to-order--${orderFirebaseKey}">Go Back To Order</button></div>`;
     renderToDom('#store', domString);
   } else {
-    emptyItems();
+    emptyItems(orderFirebaseKey);
   }
 };
 
