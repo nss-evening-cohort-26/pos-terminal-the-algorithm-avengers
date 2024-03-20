@@ -1,7 +1,26 @@
 import client from '../utils/client';
 
 const endpoint = client.databaseURL;
+
 const getRevenue = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/revenue.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const getRevenueType = (uid) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/revenue.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
@@ -15,7 +34,11 @@ const getRevenue = (uid) => new Promise((resolve, reject) => {
         const mobile = array.filter((r) => r.paymentType === 'mobile').length;
         const credit = array.filter((r) => r.paymentType === 'credit').length;
         const cash = array.filter((r) => r.paymentType === 'cash').length;
-        resolve({ credit, mobile, cash });
+        const totalRevenue = array.map((item) => Number(item.total)).reduce((a, b) => a + b, 0);
+        console.warn(totalRevenue);
+        resolve({
+          credit, mobile, cash, totalRevenue
+        });
       } else {
         resolve([]);
       }
@@ -49,4 +72,6 @@ const updateRevenue = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getRevenue, createRevenue, updateRevenue };
+export {
+  getRevenue, createRevenue, updateRevenue, getRevenueType
+};
