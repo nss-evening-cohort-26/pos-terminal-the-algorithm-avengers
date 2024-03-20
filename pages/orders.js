@@ -11,10 +11,9 @@ const showOrders = (array) => {
   if (array.length <= 0) {
     emptyOrders();
   } else {
-    let domString = '';
+    let domString = '<div class="order-container">';
     array.forEach((order) => {
       domString += `
-      <div class="order-container">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">${order.customer_name}</h5>
@@ -30,9 +29,9 @@ const showOrders = (array) => {
               <a href="#" id="delete-order-btn--${order.firebaseKey}">${order.status ? 'Delete' : ''}</a>
             </div>
           </div>
-        </div>
-      </div>`;
+        </div>`;
     });
+    domString += '</div>';
     renderToDOM('#store', domString);
   }
 };
