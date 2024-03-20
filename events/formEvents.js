@@ -1,9 +1,12 @@
+import { getOrderAndItems } from '../api/mergedData';
 import { createOrder, getOrders, updateOrder } from '../api/orderData';
+import { createRevenue, getRevenue, updateRevenue } from '../api/revenueData';
 import { showOrders } from '../pages/orders';
+import showRevenue from '../pages/showRevenue';
 
 const formEvents = (uid) => {
   //  (uid);
-  document.querySelector('#main-container').addEventListener('submit', (e) => {
+  document.querySelector('#main-container').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     if (e.target.id.includes('submit-order')) {
@@ -49,14 +52,32 @@ const formEvents = (uid) => {
 
     if (e.target.id.includes('close-order')) {
       const [, firebaseKey] = e.target.id.split('--');
-      const payload = {
-        paymentType: document.querySelector('#payment-type').value,
-        tipAmount: document.querySelector('#tip-amount').value,
+      const orderPayload = {
         status: false,
         firebaseKey
       };
+      const orderItems = await getOrderAndItems(firebaseKey);
+      const orderItemsTotal = orderItems.items.reduce((totalAmt, item) => totalAmt + parseFloat(item.price) * 1, 0).toFixed(2);
+      const tip = document.querySelector('#tip-amount').value;
+      console.warn(Number(orderItemsTotal) + Number(tip));
 
-      updateOrder(payload).then(() => {
+      const revenuePayload = {
+        paymentType: document.querySelector('#payment-type').value,
+        tipAmount: document.querySelector('#tip-amount').value,
+        timeSubmitted: new Date().toLocaleDateString('en-GB'),
+        total: orderItemsTotal,
+        order_id: firebaseKey,
+        uid
+      };
+      createRevenue(revenuePayload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+
+        updateRevenue(patchPayload).then(() => {
+          getRevenue(uid).then((revenue) => showRevenue(revenue, uid));
+        });
+      });
+
+      updateOrder(orderPayload).then(() => {
         getOrders(uid).then((orders) => showOrders(orders, uid));
       });
     }

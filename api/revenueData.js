@@ -15,7 +15,7 @@ const getRevenue = (uid) => new Promise((resolve, reject) => {
         const mobile = array.filter((r) => r.paymentType === 'mobile').length;
         const credit = array.filter((r) => r.paymentType === 'credit').length;
         const cash = array.filter((r) => r.paymentType === 'cash').length;
-        console.warn({ credit, mobile, cash });
+        resolve({ credit, mobile, cash });
       } else {
         resolve([]);
       }
