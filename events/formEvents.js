@@ -1,5 +1,9 @@
-import { createOrder, getOrders, updateOrder } from '../api/orderData';
+import { getOrderAndItems } from '../api/mergedData';
+import {
+  createOrder, getOrders, updateOrder
+} from '../api/orderData';
 import { showOrders } from '../pages/orders';
+import viewOrderItems from '../pages/viewOrderItems';
 
 const formEvents = (uid) => {
   //  (uid);
@@ -11,7 +15,6 @@ const formEvents = (uid) => {
         customer_name: document.querySelector('#customer_name').value,
         customer_email: document.querySelector('#customer_email').value,
         customer_phone: document.querySelector('#customer_phone').value,
-        price: '',
         status: true,
         timeSubmitted: new Date().toLocaleDateString('en-GB'),
         type: document.querySelector('#order-type').value,
@@ -20,9 +23,11 @@ const formEvents = (uid) => {
 
       createOrder(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
-
+        // After creating and updating order, the orderitems data is received and we are passing the order items data and the firebaskey key in to viewOrderItems
         updateOrder(patchPayload).then(() => {
-          getOrders(uid).then((orders) => showOrders(orders, uid));
+          getOrderAndItems().then((orderItemsData) => {
+            viewOrderItems({ ...orderItemsData, firebaseKey: name });
+          });
         });
       });
     }
@@ -34,7 +39,6 @@ const formEvents = (uid) => {
         customer_name: document.querySelector('#customer_name').value,
         customer_email: document.querySelector('#customer_email').value,
         customer_phone: document.querySelector('#customer_phone').value,
-        price: '',
         status: true,
         timeSubmitted: new Date().toLocaleDateString('en-GB'),
         type: document.querySelector('#order-type').value,

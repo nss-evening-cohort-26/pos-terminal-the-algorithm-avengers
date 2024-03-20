@@ -4,7 +4,7 @@ import renderToDOM from '../../utils/renderToDom';
 const addOrderForm = (obj = {}) => {
   clearDom();
   const domString = `
-    <form id="${obj.firebaseKey ? `update-order--${obj.firebaseKey}` : 'submit-order'}" class="mb-4">
+    <form id="${obj.firebaseKey ? `update-order--${obj.firebaseKey}` : `submit-order--${obj.firebaseKey}`}" class="mb-4">
       <div class="form-group">
         <label for="image">Customer Name</label>
         <input type="text" class="form-control" id="customer_name" placeholder="Enter your name here" value="${obj.customer_name || ''}" required>
