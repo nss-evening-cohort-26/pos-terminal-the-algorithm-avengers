@@ -32,6 +32,11 @@ const domEvents = (uid) => {
 
       getOrderAndItems(firebaseKey).then(viewOrderItems);
     }
+    if (e.target.id.includes('go-back-to-order')) {
+      const [, firebaseKey] = e.target.id.split('--');
+
+      getOrderAndItems(firebaseKey).then(viewOrderItems);
+    }
 
     // Click Event for deleting an Order
     if (e.target.id.includes('delete-order-btn')) {

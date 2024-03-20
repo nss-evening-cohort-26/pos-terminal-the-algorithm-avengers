@@ -2,9 +2,42 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: #2c2d2d;
+  color: whitesmoke;
   text-align: center;
+}
+#login-page{
+  img{
+    width: 550px;
+    margin-top: 60px;
+  }
+  button{
+    margin-bottom: 165px;
+    width: 250px;
+    height: 40px;
+    margin-top: 50px;
+  }
+}
+
+#homeLoggedIn{
+  button {
+    border: 0px;
+    width: 300px
+  }
+  #home-btns{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px !important;
+    align-items: center;
+  }
+}
+
+#nav{
+  background-color: #2f3434 !important;
+  button{
+    color: white;
+  }
 }
 
 .order-container {
@@ -27,7 +60,7 @@ body {
     border-radius: 4px;
 
     span {
-      display: block;
+      display: flex;
     }
 
     a {
@@ -57,22 +90,37 @@ body {
     }
   }
 
+  #itemsNot{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+  }
+
 }
 
 #view {
   h1 {
-    margin-top: 50px; 
+    margin-top: 40px; 
     margin-bottom: 50px;
   }
   #itembtns {
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    width: 80%;
+    margin-bottom: 25px;
 
     button {
       flex-grow: 2;
-      margin: 0px 10px 0px 10px;
+      margin: 15px 10px 0px 10px;
     }
+  }
+  #view-all-items-container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    margin: auto;
   }
 }
 
