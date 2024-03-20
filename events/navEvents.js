@@ -9,7 +9,6 @@ const navEvents = (uid) => {
     }
 
     if (e.target.id.includes('create_order_btn')) {
-      console.warn('Create Order Nav Bar');
       addOrderForm();
     }
   });

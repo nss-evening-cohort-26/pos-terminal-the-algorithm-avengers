@@ -42,19 +42,15 @@ const getItemsNotInTheOrder = async (orderId, uid) => {
 
   // GET ALL THE ORDERITEMS RELATES TO THE ORDER
   const orderItems = await getOrderItems(orderId);
-  console.warn(getOrderItems(orderId));
 
   // GET THE ITEMS FOUND IN THE ORDERITEM, RETURNS AN ARRAY OF PROMISES
   const itemPromises = await orderItems.map((orderItem) => getSingleItem(orderItem.item_id));
-  console.warn(itemPromises);
 
   // USE PROMISE.ALL() TO RETURN EACH ITEM OBJECT
   const items = await Promise.all(itemPromises);
-  console.warn(items);
   // FILTER AND COMPARE USING .SOME() THE TWO ARRAYS OF ALL ITEMS AND ALL ORDERITEMS
   // IF A item IS FOUND IN ORDERITEMS THEN IT WILL NOT BE RETURN IN THIS ARRAY
   const filterItems = await allItems.filter((obj) => !items.some((e) => e.firebaseKey === obj.firebaseKey));
-  console.warn(filterItems);
 
   // ONLY RETURN THE ITEMS NOT RELATED TO ORDER
   return filterItems;
