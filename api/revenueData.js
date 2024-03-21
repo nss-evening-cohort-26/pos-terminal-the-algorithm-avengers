@@ -34,10 +34,11 @@ const getRevenueType = (uid) => new Promise((resolve, reject) => {
         const mobile = array.filter((r) => r.paymentType === 'mobile').length;
         const credit = array.filter((r) => r.paymentType === 'credit').length;
         const cash = array.filter((r) => r.paymentType === 'cash').length;
-        const totalRevenue = array.map((item) => Number(item.total)).reduce((a, b) => a + b, 0);
-        console.warn(totalRevenue);
+        const revenue = array.map((item) => Number(item.total)).reduce((a, b) => a + b, 0);
+        const totalTips = array.map((item) => Number(item.tipAmount)).reduce((a, b) => a + b, 0);
+        const totalRevenue = (revenue + totalTips).toFixed(2);
         resolve({
-          credit, mobile, cash, totalRevenue
+          credit, mobile, cash, totalTips, totalRevenue
         });
       } else {
         resolve([]);
