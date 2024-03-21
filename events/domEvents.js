@@ -8,6 +8,8 @@ import closeOrderForm from '../components/forms/closeOrderForm';
 import { showOrders } from '../pages/orders';
 import showItemsNotInOrder from '../pages/showItemsNotInOrder';
 import viewOrderItems from '../pages/viewOrderItems';
+import { getRevenueType } from '../api/revenueData';
+import showRevenue from '../pages/showRevenue';
 
 const domEvents = (uid) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -18,6 +20,10 @@ const domEvents = (uid) => {
 
     if (e.target.id.includes('create_order_home')) {
       addOrderForm();
+    }
+
+    if (e.target.id.includes('view_revenue_home')) {
+      getRevenueType(uid).then((revenue) => showRevenue(revenue, uid));
     }
 
     if (e.target.id.includes('edit-order-btn')) {
