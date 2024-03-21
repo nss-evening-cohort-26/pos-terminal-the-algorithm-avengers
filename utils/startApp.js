@@ -5,11 +5,13 @@ import navBar from '../components/shared/nav';
 import domEvents from '../events/domEvents';
 import formEvents from '../events/formEvents';
 import navEvents from '../events/navEvents';
+import orderFilterStatusBtn from '../events/orderFilterStatusBtn';
 
 const startApp = (uid, displayName) => {
   domBuilder();
   domEvents(uid);
   formEvents(uid);
+  orderFilterStatusBtn(uid);
   navBar();
   homeLoggedIn(displayName);
   navEvents(uid);

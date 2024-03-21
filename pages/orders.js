@@ -1,3 +1,4 @@
+import filterCardsStatus from '../components/shared/filterCards';
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDom';
 
@@ -11,6 +12,7 @@ const showOrders = (array) => {
   if (array.length <= 0) {
     emptyOrders();
   } else {
+    filterCardsStatus();
     let domString = '<div class="order-container">';
     array.forEach((order) => {
       domString += `
