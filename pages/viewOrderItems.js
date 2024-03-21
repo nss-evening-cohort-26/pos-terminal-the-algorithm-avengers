@@ -6,7 +6,7 @@ const viewOrderItems = (obj) => {
 
   const total = obj.items.reduce((totalAmt, item) => totalAmt + parseFloat(item.price) * 100, 0);
 
-  let itemString = `<div id="view-all-items-container"><h1>TOTAL: $${Number((total / 100).toFixed(2))} </h1>`;
+  let itemString = `<div id="view-all-items-container"><h1>TOTAL: $${(total / 100).toFixed(2)} </h1>`;
   if (obj.items.length) {
     obj.items.forEach((item) => {
       itemString += `
