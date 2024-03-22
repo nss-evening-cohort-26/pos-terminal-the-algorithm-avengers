@@ -10,11 +10,12 @@
 [Walkthrough of HHP+W]()
 
 ## Topics 
-- [What is Hip Hop, Pizza, and Wangs ?]
-- [ Who is the user ?]
-- [MVP Features]
-- [Stretch Features ]
-- [Planning for Platted]
+- [What is Hip Hop, Pizza, and Wangs ?](#what-is-hip-hop-pizza-and-wangs-)
+- [Who is the user ?](#who-is-the-user-)
+- [MVP Features](#mvp-features)
+- [Stretch Features ](#stretch-feature)
+- [Planning for HHP+W](#planning-for-hhpw)
+- [Contributors](#contributors)
 ___
 
 ## What is Hip Hop, Pizza, and Wangs ?
@@ -36,19 +37,12 @@ PLACE CODE SNIPPET HERE
 - House Colors: The color of the student's card changes depending on which house they were sorted.
 - Card Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
 - Voldermort's Army: Create a separate container of cards that hold the cards for students that have been expelled. These should be styled differently from Hogwarts students.
-  
 
-## Planning for Platted
-- [ERD](https://github.com/nss-evening-cohort-26/pos-terminal-the-algorithm-avengers/files/14729122/Hip.Hop.Pizza.and.Wangs.pdf)
-- [Wireframes](#your-link)
-- [Project Board](#your-link)
-
-
-## Code Snippet <!-- OPTIONAL, but doesn't hurt -->
-PLACE CODE SNIPPET HERE
-
-## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
-<img width="1148" alt="Your Alt" src="your-link.png">
+## Planning for HHP+W
+- [ERD](https://github.com/nss-evening-cohort-26/pos-terminal-the-algorithm-avengers/assets/153558948/7a76847f-c980-4eb9-8624-c021b15bb096)
+- [Wireframes](https://www.figma.com/file/4y3EZddALuBR3ouSEM57Np/MVP?type=design&node-id=0-1&mode=design)
+- [Postman Collection](https://restless-robot-80667.postman.co/workspace/New-Team-Workspace~db71f8b8-1dc5-4d6a-8113-f93687f7d04a/collection/31929847-d58940ba-db9a-4706-a291-c2ed04a0c0e1?action=share&creator=31929847)
+- [Flow Chart](https://lucid.app/lucidchart/76cff346-df2f-48c7-8f73-40a8becad9b6/edit?invitationId=inv_5cedc629-9d07-4fd9-9286-2c46caa47ecb&page=0_0#)
 
 ## Contributors
 - [YOUR NAME](https://github.com/your-github-url)
