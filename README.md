@@ -45,4 +45,7 @@ PLACE CODE SNIPPET HERE
 - [Flow Chart](https://lucid.app/lucidchart/76cff346-df2f-48c7-8f73-40a8becad9b6/edit?invitationId=inv_5cedc629-9d07-4fd9-9286-2c46caa47ecb&page=0_0#)
 
 ## Contributors
-- [YOUR NAME](https://github.com/your-github-url)
+- [Yarelis Martin](https://github.com/your-github-url)
+- [Jesse French](https://github.com/jessefrench)
+- [Britnay Gore](https://github.com/britnay268)
+- [Andrew Spurlock](https://github.com/AndrewSpur73)
