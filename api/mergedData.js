@@ -35,7 +35,7 @@ const getASingleItemOrder = async (orderFirebaseKey, itemFirebaseKey) => {
   return singleItemInOrder;
 };
 
-// GET BOOKS NOT RELATED TO AN ORDER
+// GET ITEMS NOT RELATED TO AN ORDER
 const getItemsNotInTheOrder = async (orderId, uid) => {
   // GET ALL THE ITEMS
   const allItems = await getItems(uid);
