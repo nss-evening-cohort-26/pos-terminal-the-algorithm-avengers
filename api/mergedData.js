@@ -1,5 +1,5 @@
 import { getItems, getSingleItem } from './itemData';
-import { deleteSingleOrder, getSingleOrder } from './orderData';
+import { deleteSingleOrder, getOrders, getSingleOrder } from './orderData';
 import { deleteOrderItems, getOrderItems } from './orderItemsData';
 
 const getOrderAndItems = async (orderFirebaseKey) => {
@@ -56,6 +56,17 @@ const getItemsNotInTheOrder = async (orderId, uid) => {
   return filterItems;
 };
 
+// SEARCH ORDERS BY CUSTOMER NAME, PHONE, OR EMAIL
+const searchOrders = async (uid, searchValue) => {
+  const allOrders = await getOrders(uid);
+  const filterOrders = await allOrders.filter((orders) => (
+    orders.customer_name.toLowerCase().includes(searchValue)
+    || orders.customer_phone.toLowerCase().includes(searchValue)
+    || orders.customer_email.toLowerCase().includes(searchValue)
+  ));
+  return { orders: filterOrders };
+};
+
 export {
-  getOrderAndItems, getASingleItemOrder, deleteOrderItemsRelationship, getItemsNotInTheOrder
+  getOrderAndItems, getASingleItemOrder, deleteOrderItemsRelationship, getItemsNotInTheOrder, searchOrders
 };

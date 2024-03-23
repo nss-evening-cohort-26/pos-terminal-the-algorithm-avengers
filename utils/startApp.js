@@ -14,7 +14,7 @@ const startApp = (uid, displayName) => {
   orderFilterStatusBtn(uid);
   navBar();
   homeLoggedIn(displayName);
-  navEvents(uid);
+  navEvents(uid, displayName);
   logoutButton();
 };
 
