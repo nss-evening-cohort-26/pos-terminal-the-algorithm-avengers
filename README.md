@@ -1,47 +1,51 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/93ezRlQF)
 <div style="text-align:center">
-<h1>Hip Hop, Pizza, and Wangs (HHP+W)</h1>
+ 
+# Hip Hop, Pizza, and Wangs (HHP+W) 
+<!-- update the netlify badge above with your own badge that you can find at netlify under settings/general#status-badges -->
+![image](https://github.com/nss-evening-cohort-26/pos-terminal-the-algorithm-avengers/assets/153558948/a79dddae-f8bf-45e4-b3aa-8a81658fda38)
+</div>
 
-<image src="https://user-images.githubusercontent.com/29741570/205346767-a182560c-64a6-4cfa-80b3-0d64cf998242.png" style="height:300px;"></image></div>
+[View App](https://algorithm-avengers-hiphop-pizza-wangs.netlify.app/)
 
-## Get Started
-**READ ALL INSTRUCTIONS BEFORE BEGINNING THIS PROJECT.** Take notes as you read.
+[Walkthrough of HHP+W]()
 
-Everything that needs to be done before coding starts.
+## Topics 
+- [What is Hip Hop, Pizza, and Wangs ?](#what-is-hip-hop-pizza-and-wangs-)
+- [Who is the user ?](#who-is-the-user-)
+- [MVP Features](#mvp-features)
+- [Stretch Features ](#stretch-feature)
+- [Planning for HHP+W](#planning-for-hhpw)
+- [Contributors](#contributors)
+___
 
-* **[ERD](https://dbdiagram.io/d/Hip-Hop-Pizza-and-Wangs-65ecacc2b1f3d4062c85dbe3)** - Create an ERD to show the relationships between all of  your data
-* **[Postman Collection](https://restless-robot-80667.postman.co/workspace/New-Team-Workspace~db71f8b8-1dc5-4d6a-8113-f93687f7d04a/collection/31929847-d58940ba-db9a-4706-a291-c2ed04a0c0e1?action=share&creator=33562650)** - Create a postman collection to store and test out all of your API calls.
-* **[Wireframes](https://www.figma.com/file/4y3EZddALuBR3ouSEM57Np/MVP?node-id=0%3A1)** - This is the basic MVP wireframe. You can choose to style how you wish.
-* **[Flowchart](https://lucid.app/lucidchart/76cff346-df2f-48c7-8f73-40a8becad9b6/edit?viewport_loc=-5850%2C-681%2C10400%2C5094%2C0_0&invitationId=inv_5cedc629-9d07-4fd9-9286-2c46caa47ecb)** - Plan out the flow of your data through the application
-* **[Github Issue Tickets](https://github.com/nss-evening-cohort-26/pos-terminal-the-algorithm-avengers/issues)** - Using the Project Instructions as a guide, create issue tickets for this project’s work.
-* **[Github Milestones](https://github.com/nss-evening-cohort-26/pos-terminal-the-algorithm-avengers/milestones)** - Separate those issue tickets into Milestones to plan out the work.
+## What is Hip Hop, Pizza, and Wangs ?
+PLACE CODE SNIPPET HERE
 
-## Definition of Done
+## Who is the user ?
+- The ideal user is a restaurant owner but this specific app was tailored towards HHP+W.
+- They were in need of a POS application built to help them keep up with their many order types.
 
-Do not submit this project until all of the following are complete:
+## MVP Features
+- When the app first loads, the user should see a home screen that welcomes the user with their name, along with the "View Orders" and "Create an Order" buttons.
+- A list of all the orders appears when the user clicks on "View Orders."
+- Each order should display the name of the customer, whether the order is open or closed, the customer's phone number, email address, and the order type. The order type options include online, in person, and over the phone.
+- A user should be able to create, edit, and delete an order. When deleting an order, all order items associated with that order should be deleted as well.
+- An order will contain menu items when 'details' is clicked. Here, only the items associated with that order should be visible. The items will display the menu item name and its price.
+- The user should be able to add an item to an order and delete an item from that order only.
+- To close an order, a user should click 'Go to Payment' where they can select a payment type (cash, check, debit, credit, or mobile payment) and enter the tip amount.
+- Submitting the closed order should add that amount to the Revenue page.
 
-1. All items are completed in getting started
-1. MVP, defined by the Acceptance Criteria, has been completed
-1. The title of your application is visible in the browser tab
-1. The project has been deployed
-1. Loom video has been created
-1. `README.md` has been updated
+## Stretch Feature
 
-## Requirements
 
-Things to remember while coding out the project
+## Planning for HHP+W
+- [ERD](https://github.com/nss-evening-cohort-26/pos-terminal-the-algorithm-avengers/assets/153558948/7a76847f-c980-4eb9-8624-c021b15bb096)
+- [Wireframes](https://www.figma.com/file/4y3EZddALuBR3ouSEM57Np/MVP?type=design&node-id=0-1&mode=design)
+- [Postman Collection](https://restless-robot-80667.postman.co/workspace/New-Team-Workspace~db71f8b8-1dc5-4d6a-8113-f93687f7d04a/collection/31929847-d58940ba-db9a-4706-a291-c2ed04a0c0e1?action=share&creator=31929847)
+- [Flow Chart](https://lucid.app/lucidchart/76cff346-df2f-48c7-8f73-40a8becad9b6/edit?invitationId=inv_5cedc629-9d07-4fd9-9286-2c46caa47ecb&page=0_0#)
 
-* Clean code - single responsibility principle
-* ES6 Modules bundled with webpack
-* No errors - linters should be clean
-* Bootstrap for styling
-* Completely planned out - before each section you should be making new cards on your Github project board before you code
-* Wireframes are provided for you for MVP
-* You should have an ERD
-
-### Instructions
-
-* [MVP Definition - It Gets the Job Done](./instructions/mvp.md)
-* [Stretch Goals 1 - Filtering the Data](./instructions/stretch-1.md)
-* [Stretch Goals 2 - Dealing with Change](./instructions/stretch-2.md)
-* [Stretch Goals 3 - Play that Funky Music](./instructions/stretch-3.md)
+## Contributors
+- [Yarelis Martin](https://github.com/your-github-url)
+- [Jesse French](https://github.com/jessefrench)
+- [Britnay Gore](https://github.com/britnay268)
+- [Andrew Spurlock](https://github.com/AndrewSpur73)
