@@ -26,20 +26,17 @@ PLACE CODE SNIPPET HERE
 - They were in need of a POS application built to help them keep up with their many order types.
 
 ## MVP Features
-- When the app first loads, the user should see a home screen that Welcome's the user with their name along with the view orders and create an order button. 
-- A list of all of the orders when the user click on 'view orders'.
-- Every order should display the name of the customer, if the order is open or closed, customers phone number, email adress and the order type. Order type options were online, in person, over the phone. 
-- Voldermort's Army: Create a separate container of cards that hold the cards for students that have been expelled. These should be styled differently from Hogwarts students.
+- When the app first loads, the user should see a home screen that welcomes the user with their name, along with the "View Orders" and "Create an Order" buttons.
+- A list of all the orders appears when the user clicks on "View Orders."
+- Each order should display the name of the customer, whether the order is open or closed, the customer's phone number, email address, and the order type. The order type options include online, in person, and over the phone.
+- A user should be able to create, edit, and delete an order. When deleting an order, all order items associated with that order should be deleted as well.
+- An order will contain menu items when 'details' is clicked. Here, only the items associated with that order should be visible. The items will display the menu item name and its price.
+- The user should be able to add an item to an order and delete an item from that order only.
+- To close an order, a user should click 'Go to Payment' where they can select a payment type (cash, check, debit, credit, or mobile payment) and enter the tip amount.
+- Submitting the closed order should add that amount to the Revenue page.
 
 ## Stretch Feature
-- When a new student is added an object should be created and that object should be pushed into an array of students that then prints to the DOM.
-- House Colors: The color of the student's card changes depending on which house they were sorted.
-- Card Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
-- A user should be able to create an order, edit and delete an order. When deleting an order all order items associated with that order should be deleted as well. 
-- An order will contain the menu items when 'details is clicked'. Here you should see only the items associated with that order. The Items will display the menu item name and its price. 
--  The user should be able to add an item to an order and delete an item from only that order.
--  To close an order a user should click 'go to payment' where they can select payment type (cash, check, debit, credit, or mobile-payment) and tip amount.
--  Submitting the close order should add that amount to the Revenue page. 
+
 
 ## Planning for HHP+W
 - [ERD](https://github.com/nss-evening-cohort-26/pos-terminal-the-algorithm-avengers/assets/153558948/7a76847f-c980-4eb9-8624-c021b15bb096)
