@@ -44,7 +44,10 @@ https://www.loom.com/share/61d26509529342f991506b1f4d31a1cd?sid=0dc40a9b-96d5-46
 https://www.loom.com/share/fe95297af4d8408781c6dccb9b3cad60?sid=69b0abdf-e8b6-4d36-9b38-0b811859485d
 
 ## Stretch Feature
-
+- There is an affordance to toggle between the open and closed orders. The open orders should show up first.
+- While looking at the list of orders, you should be able to search the orders by name and/or phone number.
+- While looking at the revenue view, I should be able to see a chart of revenue.
+https://www.loom.com/share/3358904090f24da2b2be8e1c7529885c
 
 ## Planning for HHP+W
 - [ERD](https://github.com/nss-evening-cohort-26/pos-terminal-the-algorithm-avengers/assets/153558948/7a76847f-c980-4eb9-8624-c021b15bb096)
