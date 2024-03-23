@@ -40,7 +40,6 @@ const formEvents = (uid) => {
         customer_name: document.querySelector('#customer_name').value,
         customer_email: document.querySelector('#customer_email').value,
         customer_phone: document.querySelector('#customer_phone').value,
-        status: true,
         timeSubmitted: new Date().toLocaleDateString('en-GB'),
         type: document.querySelector('#order-type').value,
         uid,
