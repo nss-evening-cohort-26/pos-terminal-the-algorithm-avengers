@@ -19,7 +19,7 @@
 ___
 
 ## What is Hip Hop, Pizza, and Wangs ?
-PLACE CODE SNIPPET HERE
+Hip Hop, Pizza, and Wangs (HHP+W) is a family-owned restaurant that marries the essence of music with delectable food offerings. In response to the surge in call-in orders, they sought a Point of Sale (POS) application to seamlessly manage their operations. This application efficiently stores all incoming orders, both open and closed, empowering HHP+W to create, edit, and delete orders as necessary. Additionally, to streamline the management of order items, each order is accompanied by a dedicated page where items can be added or removed, providing flexibility and control. Upon closing an order, the revenue is automatically logged in the revenue page, enabling HHP+W to track their financial performance accurately.
 
 ## Who is the user ?
 - The ideal user is a restaurant owner but this specific app was tailored towards HHP+W.
@@ -46,7 +46,7 @@ https://www.loom.com/share/fe95297af4d8408781c6dccb9b3cad60?sid=69b0abdf-e8b6-4d
 ## Stretch Feature
 - There is an affordance to toggle between the open and closed orders. The open orders should show up first.
 - While looking at the list of orders, you should be able to search the orders by name and/or phone number.
-- While looking at the revenue view, I should be able to see a chart of revenue.
+- While looking at the revenue view, you should be able to see a chart of revenue.
 https://www.loom.com/share/3358904090f24da2b2be8e1c7529885c
 
 ## Planning for HHP+W
