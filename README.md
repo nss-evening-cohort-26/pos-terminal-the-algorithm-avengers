@@ -29,11 +29,19 @@ PLACE CODE SNIPPET HERE
 - When the app first loads, the user should see a home screen that welcomes the user with their name, along with the "View Orders" and "Create an Order" buttons.
 - A list of all the orders appears when the user clicks on "View Orders."
 - Each order should display the name of the customer, whether the order is open or closed, the customer's phone number, email address, and the order type. The order type options include online, in person, and over the phone.
+https://www.loom.com/share/61d26509529342f991506b1f4d31a1cd?sid=0dc40a9b-96d5-4630-b328-5deb25c20184
+
 - A user should be able to create, edit, and delete an order. When deleting an order, all order items associated with that order should be deleted as well.
+  https://www.loom.com/share/62534146eba14bf782ffb6b0058078e5?sid=f40f42bd-6813-4274-a518-1e32f2601548
+  
 - An order will contain menu items when 'details' is clicked. Here, only the items associated with that order should be visible. The items will display the menu item name and its price.
 - The user should be able to add an item to an order and delete an item from that order only.
 - To close an order, a user should click 'Go to Payment' where they can select a payment type (cash, check, debit, credit, or mobile payment) and enter the tip amount.
+  https://www.loom.com/share/d74cb549cd3b4e22a019202309983fca?sid=7500f504-8505-48a6-995e-eef04dbd8ddc
+
+  
 - Submitting the closed order should add that amount to the Revenue page.
+https://www.loom.com/share/fe95297af4d8408781c6dccb9b3cad60?sid=69b0abdf-e8b6-4d36-9b38-0b811859485d
 
 ## Stretch Feature
 
