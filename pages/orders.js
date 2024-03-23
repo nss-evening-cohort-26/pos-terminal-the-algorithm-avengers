@@ -18,7 +18,8 @@ const showOrders = (array) => {
       domString += `
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">${order.customer_name}</h5>
+            <h5 class="card-title" style="font-weight: 600;">${order.customer_name}</h5>
+            <p> - - - - - - - - - - - - - - - - - - - - </p>
             <div class="order-info">
               <span>Order status: ${order.status ? 'open' : 'closed'}</span>
               <span>Phone: ${order.customer_phone}</span>

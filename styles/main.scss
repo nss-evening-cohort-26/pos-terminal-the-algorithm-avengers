@@ -6,7 +6,7 @@
 .quicksand {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -15,6 +15,7 @@ body {
   color: whitesmoke;
   text-align: center;
   font-family: "Quicksand", sans-serif;
+  font-weight: 500;
 }
 #login-page{
   img{
@@ -64,6 +65,10 @@ body {
 
   .order-btns {
     margin-top: 10px;
+    
+    a{
+      margin-left: 5px;
+    }
   }
 
   .card {
@@ -135,6 +140,7 @@ body {
     width: 70%;
     align-items: center;
     margin: auto;
+    margin-top: 20px;
   }
 }
 

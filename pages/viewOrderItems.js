@@ -5,8 +5,7 @@ const viewOrderItems = (obj) => {
   clearDom();
 
   const total = obj.items.reduce((totalAmt, item) => totalAmt + parseFloat(item.price) * 100, 0);
-
-  let itemString = `<div id="view-all-items-container"><h1>TOTAL: $${(total / 100).toFixed(2)} </h1>`;
+  let itemString = '<div id="view-all-items-container">';
   if (obj.items.length) {
     obj.items.forEach((item) => {
       itemString += `
@@ -23,6 +22,8 @@ const viewOrderItems = (obj) => {
   } else {
     itemString += '<h1>There are no items in this order!</h1>';
   }
+
+  itemString += `<h1 style= "border-top: dashed 2.5px white; width: 100%; padding-top: 15px;">TOTAL: $${(total / 100).toFixed(2)} </h1>`;
 
   itemString += `${obj.status || obj.status === undefined ? `
     <div id="itembtns">
