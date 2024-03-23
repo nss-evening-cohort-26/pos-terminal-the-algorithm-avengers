@@ -38,7 +38,7 @@ const getRevenueType = (uid) => new Promise((resolve, reject) => {
         const totalTips = array.map((item) => Number(item.tipAmount)).reduce((a, b) => a + b, 0);
         const totalRevenue = (revenue + totalTips).toFixed(2);
         resolve({
-          credit, mobile, cash, totalTips, totalRevenue
+          credit, mobile, cash, totalTips, totalRevenue, array
         });
       } else {
         resolve([]);
