@@ -22,21 +22,24 @@ ___
 PLACE CODE SNIPPET HERE
 
 ## Who is the user ?
-- The ideal user for this application is a teacher
-- They have students in their classrooms that they would like to put into random groups and they have a love and passion of Harry Potter
-- The problem this app solves for them is it allows them to get their students involved and excited about being in random groups. The students have felt that the groups have not been so random and based on favorites.
+- The ideal user is a restaurant owner but this specific app was tailored towards HHP+W.
+- They were in need of a POS application built to help them keep up with their many order types.
 
 ## MVP Features
-- When a new student is added an object should be created and that object should be pushed into an array of students that then prints to the DOM.
-- House Colors: The color of the student's card changes depending on which house they were sorted.
-- Card Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
+- When the app first loads, the user should see a home screen that Welcome's the user with their name along with the view orders and create an order button. 
+- A list of all of the orders when the user click on 'view orders'.
+- Every order should display the name of the customer, if the order is open or closed, customers phone number, email adress and the order type. Order type options were online, in person, over the phone. 
 - Voldermort's Army: Create a separate container of cards that hold the cards for students that have been expelled. These should be styled differently from Hogwarts students.
 
 ## Stretch Feature
 - When a new student is added an object should be created and that object should be pushed into an array of students that then prints to the DOM.
 - House Colors: The color of the student's card changes depending on which house they were sorted.
 - Card Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
-- Voldermort's Army: Create a separate container of cards that hold the cards for students that have been expelled. These should be styled differently from Hogwarts students.
+- A user should be able to create an order, edit and delete an order. When deleting an order all order items associated with that order should be deleted as well. 
+- An order will contain the menu items when 'details is clicked'. Here you should see only the items associated with that order. The Items will display the menu item name and its price. 
+-  The user should be able to add an item to an order and delete an item from only that order.
+-  To close an order a user should click 'go to payment' where they can select payment type (cash, check, debit, credit, or mobile-payment) and tip amount.
+-  Submitting the close order should add that amount to the Revenue page. 
 
 ## Planning for HHP+W
 - [ERD](https://github.com/nss-evening-cohort-26/pos-terminal-the-algorithm-avengers/assets/153558948/7a76847f-c980-4eb9-8624-c021b15bb096)
