@@ -13,7 +13,12 @@ const showRevenue = async (taco, uid) => {
   <h1 style="margin-top: 25px; margin-bottom: 30px;">REVENUE</h1>
   <h1 id="total-revenue">TOTAL REVENUE: $${taco.totalRevenue}</h1>
   <div id="revenue-total-types">
-  <h5 id="date-range">Date Range: 01/01/2024 - 12/31/2024</h5>
+
+  <h5 id="date-range">Date Range: 
+    <input type="date" id="start" name="orders-start" value="" min="2024-01-01" max="2024-12-31" />
+    <input type="date" id="end" name="orders-end" value="" min="2024-01-01" max="2024-12-31" />
+  </h5>
+
   <br>
   <p>TOTAL TIPS: $${(taco.totalTips).toFixed(2)} </p>
   <p>TOTAL CALL IN ORDERS: ${callIn}</p>
