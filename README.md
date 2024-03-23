@@ -54,6 +54,7 @@ https://www.loom.com/share/3358904090f24da2b2be8e1c7529885c
 - [Wireframes](https://www.figma.com/file/4y3EZddALuBR3ouSEM57Np/MVP?type=design&node-id=0-1&mode=design)
 - [Postman Collection](https://restless-robot-80667.postman.co/workspace/New-Team-Workspace~db71f8b8-1dc5-4d6a-8113-f93687f7d04a/collection/31929847-d58940ba-db9a-4706-a291-c2ed04a0c0e1?action=share&creator=31929847)
 - [Flow Chart](https://lucid.app/lucidchart/76cff346-df2f-48c7-8f73-40a8becad9b6/edit?invitationId=inv_5cedc629-9d07-4fd9-9286-2c46caa47ecb&page=0_0#)
+- [Project Board](https://github.com/orgs/nss-evening-cohort-26/projects/15/views/1)
 
 ## Contributors
 - [Yarelis Martin](https://github.com/your-github-url)
