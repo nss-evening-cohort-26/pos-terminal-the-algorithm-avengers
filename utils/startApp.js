@@ -12,7 +12,7 @@ const startApp = (uid, displayName) => {
   formEvents(uid);
   navBar();
   homeLoggedIn(displayName);
-  navEvents(uid);
+  navEvents(uid, displayName);
   logoutButton();
 };
 

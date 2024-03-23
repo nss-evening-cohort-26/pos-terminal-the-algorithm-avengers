@@ -1,7 +1,10 @@
+import { searchOrders } from '../api/mergedData';
 import { getOrders } from '../api/orderData';
 import addOrderForm from '../components/forms/newOrderForm';
 import homeLoggedIn from '../components/shared/homeLoggedIn';
 import { showOrders } from '../pages/orders';
+import clearDom from '../utils/clearDom';
+import renderToDom from '../utils/renderToDom';
 
 const navEvents = (uid, displayName) => {
   document.querySelector('#navigation').addEventListener('click', (e) => {
@@ -16,6 +19,24 @@ const navEvents = (uid, displayName) => {
     if (e.target.id.includes('image')) {
       clearDom();
       homeLoggedIn(displayName);
+    }
+  });
+
+  const searchBar = document.querySelector('#search');
+  searchBar.addEventListener('keyup', (e) => {
+    const searchValue = searchBar.value.toLowerCase();
+
+    if (e.keyCode === 13) {
+      searchBar.value = '';
+      searchOrders(uid, searchValue).then(({ orders }) => {
+        if (orders.length > 0) {
+          showOrders(orders, uid);
+        } else {
+          clearDom();
+          const domString = '<h1>No results.</h1>';
+          renderToDom('#store', domString);
+        }
+      });
     }
   });
 };
