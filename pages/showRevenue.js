@@ -9,9 +9,10 @@ const showRevenue = async (taco, uid) => {
   const callIn = orders.filter((o) => o.type === 'phone').length;
   const online = orders.filter((o) => o.type === 'online').length;
   let domString = '';
-  domString = `<div>
-  <h1 style="margin-bottom: 50px;">REVENUE</h1>
-  <h1 id="total-revenue" style="margin-bottom: 50px;">TOTAL REVENUE: $${taco.totalRevenue}</h1>
+  domString = `<div id="revenue-container">
+  <h1 style="margin-top: 25px; margin-bottom: 30px;">REVENUE</h1>
+  <h1 id="total-revenue">TOTAL REVENUE: $${taco.totalRevenue}</h1>
+  <div id="revenue-total-types">
   <h5 id="date-range">Date Range: 01/01/2024 - 12/31/2024</h5>
   <br>
   <p>TOTAL TIPS: $${(taco.totalTips).toFixed(2)} </p>
@@ -23,6 +24,7 @@ const showRevenue = async (taco, uid) => {
   <p>Cash: ${taco.cash} </p>
   <p>Credit: ${taco.credit} </p>
   <p>Mobile: ${taco.mobile} </p>
+  </div>
   </div>`;
 
   domString += `<table class="table">
