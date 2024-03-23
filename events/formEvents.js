@@ -17,7 +17,7 @@ const formEvents = (uid) => {
         customer_email: document.querySelector('#customer_email').value,
         customer_phone: document.querySelector('#customer_phone').value,
         status: true,
-        timeSubmitted: new Date().toLocaleDateString('en-GB'),
+        timeSubmitted: new Date().toISOString().split('T')[0],
         type: document.querySelector('#order-type').value,
         uid
       };
@@ -41,7 +41,7 @@ const formEvents = (uid) => {
         customer_email: document.querySelector('#customer_email').value,
         customer_phone: document.querySelector('#customer_phone').value,
         status: true,
-        timeSubmitted: new Date().toLocaleDateString('en-GB'),
+        timeSubmitted: new Date().toISOString().split('T')[0],
         type: document.querySelector('#order-type').value,
         uid,
         firebaseKey,
@@ -64,7 +64,7 @@ const formEvents = (uid) => {
       const revenuePayload = {
         paymentType: document.querySelector('#payment-type').value,
         tipAmount: document.querySelector('#tip-amount').value,
-        timeSubmitted: new Date().toLocaleDateString('en-GB'),
+        timeSubmitted: new Date().toISOString().split('T')[0],
         total: orderItemsTotal,
         order_id: firebaseKey,
         uid
