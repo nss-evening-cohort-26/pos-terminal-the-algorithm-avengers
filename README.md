@@ -7,8 +7,6 @@
 
 [View App](https://algorithm-avengers-hiphop-pizza-wangs.netlify.app/)
 
-[Walkthrough of HHP+W]()
-
 ## Topics 
 - [What is Hip Hop, Pizza, and Wangs ?](#what-is-hip-hop-pizza-and-wangs-)
 - [Who is the user ?](#who-is-the-user-)
